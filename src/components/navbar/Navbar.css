@@ -4,6 +4,7 @@
     height: 60px;
     display: flex;
     justify-content: space-between;
+    font-family: 'Courier New', Courier, monospace;
 }
 .app_name{
     margin-top: auto;
@@ -13,7 +14,6 @@
 .app_name > span{
     font-size: 20px;
     font-weight: 500;
-    font-family: 'Courier New', Courier, monospace;
 }
 .options{
     margin-top: auto;
@@ -27,5 +27,10 @@
 }
 .avatar{
     height: 50px;
-    width: 100px;
+    width: 50px;
+    border-radius: 100px;
+}
+.links{
+    text-decoration: none;
+    color: aliceblue;
 }
