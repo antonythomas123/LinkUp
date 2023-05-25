@@ -25,11 +25,11 @@ function Login() {
         <div className='login_text'>Login</div>
         <div className='username'>
           <span>Username</span>
-          <input type='text' onChange={(event) => setUsername(event.target.value)} />
+          <input type='text' onChange={(event) => setUsername(event.target.value)} className='login_input'/>
         </div>
         <div className='password'>
           <span>Password</span>
-          <input type='password' onChange={(event) => setPassword(event.target.value)}/>
+          <input type='password' onChange={(event) => setPassword(event.target.value)} className='login_input'/>
         </div>
         <div className='login_button'>
           <button onClick={handleLogin}>Login</button>

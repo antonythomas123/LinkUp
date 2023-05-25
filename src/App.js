@@ -2,6 +2,7 @@ import './App.css';
 import Home from './pages/Home/Home';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Login from './pages/Login/Login';
+import CreatePost from './pages/CreatePost/CreatePost';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home/>}/>
           <Route path='/login' element={<Login/>}/>
+          <Route path='/createpost' element={<CreatePost/>}/>
         </Routes>
       </Router>
     </div>
