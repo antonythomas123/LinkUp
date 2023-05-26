@@ -34,7 +34,8 @@ function Form() {
       title: data.title,
       description: data.description,
       userId: user?.uid,
-      username: user?.displayName
+      username: user?.displayName,
+      photoURL: user?.photoURL,
     })
     navigate('/');
   }
