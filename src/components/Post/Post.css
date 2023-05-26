@@ -1,3 +1,46 @@
-.like_button{
-    width: 3%;
+.post_main {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  margin: 10px;
+  border-radius: 4px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.post_username {
+  width: 100%;
+  margin: 10px;
+  padding-left: 20px;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.post_user_pic {
+  border-radius: 100px;
+  height: 30px;
+  margin-right: 10px;
+}
+.post_contents {
+  width: 100%;
+  padding-left: 80px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.post_title,
+.post_description {
+  margin-bottom: 10px;
+  font-size: medium;
+}
+.like_button {
+  border-width: 0;
+  background-color: transparent;
+}
+.likes{
+    margin-bottom: 10px;
 }

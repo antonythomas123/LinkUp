@@ -3,6 +3,7 @@ import Navbar from "../../components/navbar/Navbar";
 import { getDocs, collection } from "firebase/firestore";
 import { db, auth } from "../../config/firebase";
 import Post from "../../components/Post/Post";
+import './Home.css';
 
 function Home() {
   const [postList, setPostList] = useState(null);
@@ -20,7 +21,7 @@ function Home() {
   return (
     <div>
       <Navbar />
-      <div>
+      <div className="posts">
         {postList?.map((post, key)=> (<Post key={key} post={post}/>))}
       </div>
     </div>

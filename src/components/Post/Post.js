@@ -70,7 +70,7 @@ function Post(props) {
       console.log(err);
     }
   };
-  
+
   //checking whether the current user has liked the post or not
   const hasUserLiked = likes?.find((like) => like.userId === user?.uid);
 
@@ -79,15 +79,16 @@ function Post(props) {
   }, []);
 
   return (
-    <div>
-      <div>
-        <span>{post.title}</span>
-      </div>
-      <div>
-        <span>{post.description}</span>
-      </div>
-      <div>
+    <div className="post_main">
+      <div className="post_username">
+        <span>{user?.photoURL ? <img src={user?.photoURL} className="post_user_pic"/> : " "}</span>
         <span>@{post.username}</span>
+      </div>
+      <div className="post_contents">
+        <span className="post_title">{post.title}</span>
+        <span className="post_description">{post.description}</span>
+      </div>
+      <div className="likes">
         <button
           className="like_button"
           onClick={hasUserLiked ? removeLike : addLike}
