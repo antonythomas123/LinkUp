@@ -48,7 +48,7 @@ function Navbar() {
         </span>
         {user ? (
           <span>
-            <button onClick={logout}>Logout</button>
+            <button className="logout_button" onClick={logout}>Logout</button>
           </span>
         ) : (
           " "

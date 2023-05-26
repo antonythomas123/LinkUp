@@ -27,9 +27,14 @@
     margin: 5px;
 }
 .avatar{
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
     border-radius: 100px;
+}
+.logout_button{
+    margin-top: 14px;
+    height: 20px;
+    border-width: 0;
 }
 .links{
     text-decoration: none;
