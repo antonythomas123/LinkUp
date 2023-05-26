@@ -40,6 +40,7 @@
 .like_button {
   border-width: 0;
   background-color: transparent;
+  cursor: pointer;
 }
 .likes{
     margin-bottom: 10px;

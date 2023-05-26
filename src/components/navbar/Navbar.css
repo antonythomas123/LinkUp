@@ -1,42 +1,58 @@
-.navbar_main{
-    width: 100%;
-    background-color: darkviolet;
-    height: 60px;
-    display: flex;
-    justify-content: space-between;
-    font-family: 'Courier New', Courier, monospace;
-    color: aliceblue;
+.navbar_main {
+  width: 100%;
+  background-color: darkviolet;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Courier New", Courier, monospace;
+  color: aliceblue;
 }
-.app_name{
-    margin-top: auto;
-    margin-bottom:  auto;
-    margin-left: 30px;
+.app_name {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 30px;
 }
-.app_name > span{
-    font-size: 20px;
-    font-weight: 500;
+.app_name > span {
+  font-size: 20px;
+  font-weight: 500;
 }
-.options{
-    margin-top: auto;
-    margin-bottom:  auto;
-    margin-right: 30px;
-    display: flex;
-    align-items: center;
+.options {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 30px;
+  display: flex;
+  align-items: center;
 }
-.options > span{
-    margin: 5px;
+.options > span {
+  margin: 5px;
 }
-.avatar{
-    height: 40px;
-    width: 40px;
-    border-radius: 100px;
+.avatar {
+  height: 40px;
+  width: 40px;
+  border-radius: 100px;
 }
-.logout_button{
-    margin-top: 14px;
-    height: 20px;
-    border-width: 0;
+.logout_button {
+  margin-top: 14px;
+  height: 20px;
+  border-width: 0;
+  cursor: pointer;
 }
-.links{
-    text-decoration: none;
-    color: aliceblue;
+.links {
+  position: relative;
+  text-decoration: none;
+  color: aliceblue;
+}
+.links:before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  transition: width 0.3s ease;
+}
+
+.links:hover:before {
+  width: 100%;
 }
