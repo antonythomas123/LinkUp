@@ -84,6 +84,9 @@ function Post(props) {
         <span>{post?.photoURL ? <img src={post?.photoURL} className="post_user_pic"/> : " "}</span>
         <span>@{post.username}</span>
       </div>
+      <div className="image_div">
+      {post.imageURL ? <img src={post.imageURL} className="image_post"/> : ""}
+      </div>
       <div className="post_contents">
         <span className="post_title">{post.title}</span>
         <span className="post_description">{post.description}</span>

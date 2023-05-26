@@ -11,6 +11,9 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+.image_input{
+    margin: 10px;
+}
 .form_input{
     width: 80%;
     height: 30px;
