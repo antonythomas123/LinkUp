@@ -1,8 +1,5 @@
 # A Small Social Media App Using React JS
 
-# Project hosted in 
-https://linkup-b0850.web.app/
-
 ## Available Scripts
 
 In the project directory, you can run:
