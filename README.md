@@ -1,6 +1,7 @@
 # A Small Social Media App Using React JS
 
 # Available at: https://linkup-b0850.web.app/
+**Login to see the posts
 
 ## Available Scripts
 
