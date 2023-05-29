@@ -31,15 +31,15 @@
   flex-direction: column;
   align-items: flex-start;
 }
-.image_div{
+.image_div {
   width: 100%;
   display: flex;
   justify-content: center;
 }
-.image_post{
+.image_post {
   width: 100%;
 }
-.post_title{
+.post_title {
   margin-top: 10px;
   font-weight: bold;
 }
@@ -54,6 +54,20 @@
   background-color: transparent;
   cursor: pointer;
 }
-.likes{
-    margin-bottom: 10px;
+.likes {
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 768px) {
+  .post_main {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    margin: 10px;
+    border-radius: 4px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
 }
