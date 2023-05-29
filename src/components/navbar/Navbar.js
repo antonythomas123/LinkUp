@@ -18,42 +18,48 @@ function Navbar() {
       <div className="app_name">
         <span>LinkUp</span>
       </div>
-      <div className="options">
-        <span>
-          <Link to={"/"} className="links">
-            Home
-          </Link>
-        </span>
-        {!user ? (
+      {user ? (
+        <div className="options">
           <span>
-            <Link to={"/login"} className="links">
-              Login
+            <Link to={"/"} className="links">
+              Home
             </Link>
           </span>
-        ) : (
-          <span>
-            <Link to={"/createpost"} className="links">
-              Create Post
-            </Link>
-          </span>
-        )}
-
-        <span>{user?.displayName}</span>
-        <span>
-          {user?.photoURL ? (
-            <img src={user?.photoURL} className="avatar" alt="" />
+          {!user ? (
+            <span>
+              <Link to={"/login"} className="links">
+                Login
+              </Link>
+            </span>
           ) : (
-            <Avatar className="avatar" />
+            <span>
+              <Link to={"/createpost"} className="links">
+                Create Post
+              </Link>
+            </span>
           )}
-        </span>
-        {user ? (
+
+          <span>{user?.displayName}</span>
           <span>
-            <button className="logout_button" onClick={logout}>Logout</button>
+            {user?.photoURL ? (
+              <img src={user?.photoURL} className="avatar" alt="" />
+            ) : (
+              <Avatar className="avatar" />
+            )}
           </span>
-        ) : (
-          " "
-        )}
-      </div>
+          {user ? (
+            <span>
+              <button className="logout_button" onClick={logout}>
+                Logout
+              </button>
+            </span>
+          ) : (
+            " "
+          )}
+        </div>
+      ) : (
+        " "
+      )}
     </div>
   );
 }

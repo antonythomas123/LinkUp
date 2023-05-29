@@ -3,11 +3,15 @@ import Navbar from "../../components/navbar/Navbar";
 import { getDocs, collection } from "firebase/firestore";
 import { db, auth } from "../../config/firebase";
 import Post from "../../components/Post/Post";
-import './Home.css';
+import "./Home.css";
+import { useAuthState } from "react-firebase-hooks/auth";
+import Login from "../Login/Login";
 
 function Home() {
   const [postList, setPostList] = useState(null);
   const postRef = collection(db, "posts");
+
+  const [user] = useAuthState(auth);
 
   const getPost = async () => {
     const data = await getDocs(postRef);
@@ -20,10 +24,21 @@ function Home() {
 
   return (
     <div>
-      <Navbar />
-      <div className="posts">
-        {postList?.map((post, key)=> (<Post key={key} post={post}/>))}
-      </div>
+      {user ? (
+        <>
+          <Navbar />
+          <div className="posts">
+            {postList?.map((post, key) => (
+              <Post key={key} post={post} />
+            ))}
+          </div>
+        </>
+      ) : (
+        <>
+          <Navbar />
+          <Login />
+        </>
+      )}
     </div>
   );
 }
